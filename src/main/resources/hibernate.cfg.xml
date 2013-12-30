@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+    	<mapping class="com.email.system.model.Authority" />
+    	<mapping class="com.email.system.model.BlackList" />
+    	<mapping class="com.email.system.model.Campaign" />
+    	<mapping class="com.email.system.model.Contact" />
+    	<mapping class="com.email.system.model.EmailSchedule" />
+    	<mapping class="com.email.system.model.EmailTemplate" />
+    	<mapping class="com.email.system.model.ListAddress" />
+    	<mapping class="com.email.system.model.User" />
+    </session-factory>
+</hibernate-configuration>
