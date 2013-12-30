@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,8 +7,24 @@
 </head>
 <body class="easyui-layout">
 	<jsp:include page="layout/menu.jsp"></jsp:include>
-	<div data-options="region:'east',split:true,collapsed:true,title:'East'" style="width:100px;padding:10px;">east region</div>
-	<div data-options="region:'south',border:false" style="height:50px;background:#A9FACD;padding:10px;">south region</div>
-	<div data-options="region:'center',title:'Center'"></div>
+	<jsp:include page="layout/footer.jsp"></jsp:include>
+	<div data-options="region:'center',title:'Users Management'">
+	
+	    <table id="tt" class="easyui-datagrid" url="<c:url value ='/email/admin/user/datagrid'/>" iconCls="icon-save" rownumbers="true" pagination="true">
+	        <thead>
+	            <tr>
+	                <th data-options="field:'username'">Username</th>
+	                <th data-options="field:'name'">Name</th>
+	                <th data-options="field:'email'">Email</th>
+	                <th data-options="field:'phone'">Phone</th>
+	                <th data-options="field:'company'">Company</th>
+	                <th data-options="field:'address'">Address</th>
+	                <th data-options="field:'enable'">Status</th>
+	                <th data-options="field:'action'" align="center">Action</th>
+	            </tr>
+	        </thead>
+	    </table>
+	    
+	</div>
 </body>
 </html>

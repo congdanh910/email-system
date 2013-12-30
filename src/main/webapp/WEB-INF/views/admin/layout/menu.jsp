@@ -1,4 +1,4 @@
-<div data-options="region:'west',split:true" title="West" style="width:150px;">
+<div data-options="region:'west',split:true" title="Navigation" style="width:180px;">
  	<div class="easyui-accordion" data-options="fit:true,border:false">
           <div title="Users" data-options="selected:true" style="padding:10px;">
               <a href="#">Manage Users</a><br />
