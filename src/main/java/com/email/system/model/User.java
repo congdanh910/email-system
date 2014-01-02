@@ -30,7 +30,7 @@ public class User implements Serializable, UserDetails {
 	private Long userId;
 	@Column(nullable = false, length = 30, unique = true)
 	private String username;
-	@Column(nullable = false, length = 32, unique = true)
+	@Column(nullable = false, length = 32)
 	private String password;
 	@Column(nullable = false, length = 100)
 	private String fullName;
@@ -41,6 +41,7 @@ public class User implements Serializable, UserDetails {
 	private String phone;
 	@Column(nullable = false)
 	private String email;
+	@Column(name = "userLimit")
 	private int limit;
 	@Column(name = "key_search")
 	private String keySearch;
@@ -66,13 +67,12 @@ public class User implements Serializable, UserDetails {
 	public User() {
 	}
 
-	public User(Long userId, String username, String password, String fullName,
+	public User(String username, String password, String fullName,
 			String company, String address, String country, String phone,
 			String email, int limit, boolean enabled,
 			boolean accountNonExpired, boolean credentialsNonExpired,
 			boolean accountNonLocked, String keySearch, String[] accesss,
 			User parent, Date createDate, Date modifiedDate) {
-		this.userId = userId;
 		this.username = username;
 		this.password = password;
 		this.fullName = fullName;

@@ -6,18 +6,20 @@ public class UserMapper implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private String username;
 	private String name;
+	private String email;
 	private String phone;
 	private String company;
 	private String address;
-	private boolean status;
+	private String status;
 
 	public UserMapper() {
 	}
 
-	public UserMapper(String username, String name, String phone,
-			String company, String address, boolean status) {
+	public UserMapper(String username, String name, String email, String phone,
+			String company, String address, String status) {
 		this.username = username;
 		this.name = name;
+		this.email = email;
 		this.phone = phone;
 		this.company = company;
 		this.address = address;
@@ -38,6 +40,14 @@ public class UserMapper implements Serializable {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getPhone() {
@@ -64,11 +74,11 @@ public class UserMapper implements Serializable {
 		this.address = address;
 	}
 
-	public boolean isStatus() {
+	public String isStatus() {
 		return status;
 	}
 
-	public void setStatus(boolean status) {
+	public void setStatus(String status) {
 		this.status = status;
 	}
 

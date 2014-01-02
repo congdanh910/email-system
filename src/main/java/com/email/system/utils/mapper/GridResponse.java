@@ -4,44 +4,23 @@ import java.io.Serializable;
 import java.util.List;
 
 public class GridResponse<T extends Serializable> {
-
-	private String page;
-	private int totalPages;
-	private int records;
+	private int total;
 	private List<T> rows;
 
 	public GridResponse() {
 	}
 
-	public GridResponse(String page, int totalPages, int records, List<T> rows) {
-		this.page = page;
-		this.totalPages = totalPages;
-		this.records = records;
+	public GridResponse(int total, List<T> rows) {
+		this.total = total;
 		this.rows = rows;
 	}
 
-	public String getPage() {
-		return page;
+	public int getTotal() {
+		return total;
 	}
 
-	public void setPage(String page) {
-		this.page = page;
-	}
-
-	public int getTotalPages() {
-		return totalPages;
-	}
-
-	public void setTotalPages(int totalPages) {
-		this.totalPages = totalPages;
-	}
-
-	public int getRecords() {
-		return records;
-	}
-
-	public void setRecords(int records) {
-		this.records = records;
+	public void setTotal(int total) {
+		this.total = total;
 	}
 
 	public List<T> getRows() {
@@ -52,9 +31,7 @@ public class GridResponse<T extends Serializable> {
 		this.rows = rows;
 	}
 
-	@Override
 	public String toString() {
-		return "GridResponse [page=" + page + ", totalPages=" + totalPages
-				+ ", records=" + records + "]";
+		return "Rows : " + rows;
 	}
 }
