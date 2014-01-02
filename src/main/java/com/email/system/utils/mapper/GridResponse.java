@@ -4,22 +4,22 @@ import java.io.Serializable;
 import java.util.List;
 
 public class GridResponse<T extends Serializable> {
-	private int total;
+	private Long total;
 	private List<T> rows;
 
 	public GridResponse() {
 	}
 
-	public GridResponse(int total, List<T> rows) {
+	public GridResponse(Long total, List<T> rows) {
 		this.total = total;
 		this.rows = rows;
 	}
 
-	public int getTotal() {
+	public Long getTotal() {
 		return total;
 	}
 
-	public void setTotal(int total) {
+	public void setTotal(Long total) {
 		this.total = total;
 	}
 

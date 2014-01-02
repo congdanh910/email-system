@@ -10,20 +10,20 @@ public class UserMapper implements Serializable {
 	private String phone;
 	private String company;
 	private String address;
-	private String status;
+	private String enable;
 
 	public UserMapper() {
 	}
 
 	public UserMapper(String username, String name, String email, String phone,
-			String company, String address, String status) {
+			String company, String address, String enable) {
 		this.username = username;
 		this.name = name;
 		this.email = email;
 		this.phone = phone;
 		this.company = company;
 		this.address = address;
-		this.status = status;
+		this.enable = enable;
 	}
 
 	public String getUsername() {
@@ -74,12 +74,12 @@ public class UserMapper implements Serializable {
 		this.address = address;
 	}
 
-	public String isStatus() {
-		return status;
+	public String getEnable() {
+		return enable;
 	}
 
-	public void setStatus(String status) {
-		this.status = status;
+	public void setEnable(String enable) {
+		this.enable = enable;
 	}
 
 }

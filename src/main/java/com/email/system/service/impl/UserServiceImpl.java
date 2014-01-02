@@ -1,9 +1,12 @@
 package com.email.system.service.impl;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
 import com.email.system.dao.UserDAO;
 import com.email.system.model.User;
 import com.email.system.service.UserService;
@@ -48,6 +51,16 @@ public class UserServiceImpl implements UserService{
 	@Override
 	public void clear() {
 		userDAO.clear();
+	}
+
+	@Override
+	public List<User> findBy(Pageable pageable) {
+		return userDAO.findBy(pageable);
+	}
+
+	@Override
+	public Long countFindBy() {
+		return userDAO.countFindBy();
 	}
 
 }
