@@ -1,14 +1,13 @@
 <div data-options="region:'west',split:true" title="Navigation" style="width:180px;">
- 	<div class="easyui-accordion" data-options="fit:true,border:false">
-          <div title="Users" data-options="selected:true" style="padding:10px;">
-              <a href="#">Manage Users</a><br />
-              <a href="#">Filter</a>
-          </div>
-          <div title="Title2" style="padding:10px;">
-              content2
-          </div>
-          <div title="Title3" style="padding:10px">
-              content3
-          </div>
-      </div>
+ 	<ul class="easyui-tree">
+        <li>
+            <span>Information</span>
+            <ul>
+            	<li><a href="#" onclick="addTabs('Welcome')">welcome.html</a></li>
+                <li><a href="#" onclick="addTabs('Index')">index.html</a></li>
+                <li><a href="#" onclick="addTabs('About')">about.html</a></li>
+                <li><a href="#" onclick="addTabs('Help')">help.html</a></li>
+            </ul>
+        </li>
+    </ul>
 </div>

@@ -32,10 +32,11 @@ public class UserController {
 	public @ResponseBody GridResponse<UserMapper> datagird(
 			@RequestParam(value = "page", required = true, defaultValue = "1") int[] page,
 			@RequestParam(value = "rows", required = true, defaultValue = "5") int[] rows) {
-		Pageable pageable = new PageRequest(page[0] -1, rows[0]);
+		Pageable pageable = new PageRequest(page[0] -1 , rows[0]);
 		GridResponse<UserMapper> response = new GridResponse<UserMapper>();
 		List<UserMapper> mappers = new ArrayList<UserMapper>();
 		List<User> users = userService.findBy(pageable);
+		System.out.println("list user: " + users.size() );
 		for (User user : users) {
 			mappers.add(new UserMapper(user.getUsername(), user.getFullName(), user.getEmail(), user.getPhone(), user.getCompany(), user.getAddress(), user.isEnabled()?"Active":"Deactive"));
 		}

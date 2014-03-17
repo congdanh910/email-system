@@ -14,7 +14,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "LIST_ADDRESS")
+@Table(name = "eml_listaddress")
 public class ListAddress implements Serializable {
 
 	private static final long serialVersionUID = 1L;

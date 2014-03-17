@@ -12,7 +12,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "EMAIL_SCHEDULE")
+@Table(name = "eml_schedule")
 public class EmailSchedule implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
@@ -23,9 +23,9 @@ public class EmailSchedule implements Serializable {
 	@OneToOne
 	private User user;
 	private int status;
-	@Column(name = "create_date")
+	@Column(name = "create_date", columnDefinition="timestamp with time zone")
 	private Date createDate;
-	@Column(name = "finised _date")
+	@Column(name = "finised_date", columnDefinition = "timestamp with time zone")
 	private Date finishedDate;
 
 	public EmailSchedule() {

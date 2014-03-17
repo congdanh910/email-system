@@ -10,7 +10,7 @@ import javax.persistence.Table;
 import org.springframework.security.core.GrantedAuthority;
 
 @Entity
-@Table(name = "ROLE")
+@Table(name = "eml_role")
 public class Authority implements Serializable, GrantedAuthority {
 
 	private static final long serialVersionUID = 1L;

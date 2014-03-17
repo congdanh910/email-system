@@ -15,6 +15,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
+import javax.persistence.Table;
 
 import org.hibernate.annotations.Type;
 import org.springframework.security.core.GrantedAuthority;
@@ -22,6 +23,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 @Entity
+@Table(name="eml_user")
 public class User implements Serializable, UserDetails {
 
 	private static final long serialVersionUID = 1L;
@@ -59,9 +61,9 @@ public class User implements Serializable, UserDetails {
 	@Column(name = "account_non_locked")
 	@Type(type = "yes_no")
 	private boolean accountNonLocked;
-	@Column(name = "create_date")
+	@Column(name = "create_date", columnDefinition="timestamp with time zone")
 	private Date createDate;
-	@Column(name = "modified_date")
+	@Column(name = "modified_date", columnDefinition="timestamp with time zone")
 	private Date modifiedDate;
 
 	public User() {

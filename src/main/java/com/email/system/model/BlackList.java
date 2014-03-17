@@ -14,7 +14,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "BLACK_LIST")
+@Table(name = "eml_blacklist")
 public class BlackList implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id

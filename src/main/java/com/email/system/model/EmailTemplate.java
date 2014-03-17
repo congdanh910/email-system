@@ -14,7 +14,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "EMAIL_TEMPLATE")
+@Table(name = "eml_template")
 public class EmailTemplate implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
