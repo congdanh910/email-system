@@ -20,13 +20,13 @@
 	});
 
 	// add tab function
-	function addTabs(tabname) {
+	function addTabs(tabname, href) {
  		if ($('#tt').tabs('exists', tabname)) {
  			$('#tt').tabs('select', tabname);
  		} else {
 			$('#tt').tabs('add', {
 				title : tabname,
-				content : tabname,
+				href: href,
 				closable : true
 			});
  		}

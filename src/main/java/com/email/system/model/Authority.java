@@ -11,7 +11,7 @@ import org.springframework.security.core.GrantedAuthority;
 
 @Entity
 @Table(name = "eml_role")
-public class Authority implements Serializable, GrantedAuthority {
+public class Authority implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	@Column(nullable = false)
@@ -28,10 +28,10 @@ public class Authority implements Serializable, GrantedAuthority {
 		this.roleName = roleName;
 	}
 
-	@Override
-	public String getAuthority() {
-		return authority;
-	}
+//	@Override
+//	public String getAuthority() {
+//		return authority;
+//	}
 
 	public void setAuthority(String authority) {
 		this.authority = authority;
