@@ -61,9 +61,9 @@ public class User implements Serializable, UserDetails {
 	@Column(name = "account_non_locked")
 	@Type(type = "yes_no")
 	private boolean accountNonLocked;
-	@Column(name = "create_date", columnDefinition="timestamp with time zone")
+	@Column(name = "create_date")
 	private Date createDate;
-	@Column(name = "modified_date", columnDefinition="timestamp with time zone")
+	@Column(name = "modified_date")
 	private Date modifiedDate;
 
 	public User() {
